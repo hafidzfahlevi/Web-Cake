@@ -1,0 +1,185 @@
+/* CSS Document */
+body {
+	background-color: #fff;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container */
+.container {
+	width: 100%;
+	height: auto;
+	min-height: 500;
+	margin: auto;
+}
+
+/* Header */
+header {
+	height: 60px;
+	border-bottom: solid 1px #EEE;
+}
+header #logo {
+	height: 40px;
+	padding: 10px 0;
+	font-size: 36px;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 20%;
+	margin-left: 5%;
+	float: left;
+	border-right: solid thin #eee;
+	color: #f02;
+}
+header #menu {
+	width: 72%;
+	margin-left: 2%;
+	float: right;
+	height: 60px;
+}
+#menu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#menu ul li {
+	float: left;
+	height: 60px;
+	display: inline-block;
+}
+#menu ul li a, #menu ul li a:visited {
+	color: #f02;
+	font-size: 16px;
+	line-height: 20px;
+	text-decoration: none;
+	padding: 20px;
+	height: 20px;
+	float: left;
+	font-weight: bold;
+}
+#menu ul li a:hover {
+	background-color: #f02;
+	color: #fff;
+}
+
+/* Slider */
+#slider {
+	height: auto;
+	min-height: 300px;
+	background-color: #ffc;
+	border-bottom: solid thin #990;
+}
+
+/* Welcome */
+#welcome {
+	padding: 20px 20%;
+	text-align: center;
+	font-size: 35px;
+}
+
+section {
+	padding: 10px 2%;
+	min-height: 200px;
+}
+
+/*Produk*/
+.produk {
+	width: 23%;
+	height: 300px;
+	float: left;
+	margin: 10px 1%;
+	text-align: center;
+}
+.produk .gambar {
+	width: 100%;
+	height: 230px;
+}
+.produk .gambar img {
+	width: auto;
+	max-width: 88%;
+	padding: 5px 2%;
+	border: solid 1px #EEE;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+	height: auto;
+	max-height: 216px;
+}
+.produk .gambar img:hover {
+	background-color: #f60;
+}
+.produk .nama {
+	margin-top: 20px;
+	height: 70px;
+	width: 100%;
+}
+.produk .nama h1 {
+	font-size: 16px;
+}
+.produk a, .produk a:visited {
+	color: #f60;
+	text-decoration: none;
+}
+.produk a:hover {
+	color: #900;
+}
+	
+
+/* Map */
+.map {
+	min-height: 300px;
+	background-color: #09c;
+	border-top: solid 2px green;
+}
+.map iframe {
+	width: 100%;
+	height: 300px;
+}
+.detail {
+	width: 100%;
+	min-height: 200px;
+}
+.detail .foto {
+	width: 44%;
+	min-height: 200px;
+	margin-right: 2%;
+	float:left;
+	border: solid 1px #eee;
+	border-radius: 10px;
+	padding: 10px 1%;
+	box-shadow: 2px 2px 4px #ccc;
+	-moz-box-shadow: 2px 2px 4px #ccc;
+	-webkit-box-shadow: 2px 2px 4px #ccc;
+}
+.detail .foto img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+.detail .keterangan {
+	width: 48%;
+	min-height: 200px;
+	border: solid 1px #eee;
+	padding: 10px 1%;
+	float: right;
+	border-radius: 10px;
+	box-shadow: 2px 2px 4px #ccc;
+	-moz-box-shadow: 2px 2px 4px #ccc;
+	-webkit-box-shadow: 2px 2px 4px #ccc;
+}
+.detail .keterangan h1 {
+	color: #f60;
+	border-bottom: solid thin #eee;
+}
+.detail p {
+	text-align: justify;
+}
+.clearfix {
+	clear: both;
+}
+
+footer {
+	padding: 20px 2%;
+	background-color: #000;
+	color: #fff;
+	min-height: 40px;
+}

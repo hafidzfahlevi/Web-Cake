@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dany's Website</title>
+<link href="css/style.css" rel="stylesheet">
+<!-- Owl Carousel Assets -->
+    <link href="owl/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl/owl-carousel/owl.theme.css" rel="stylesheet">
+
+    <link href="owl/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+ <script src="owl/assets/js/jquery-1.9.1.min.js"></script> 
+    <script src="owl/owl-carousel/owl.carousel.js"></script>
+
+
+    <!-- Demo -->
+
+    <style>
+    #owl-demo .item img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    #bar{
+      width: 0%;
+      max-width: 100%;
+      height: 4px;
+      background: #7fc242;
+    }
+    #progressBar{
+      width: 100%;
+      background: #EDEDED;
+    }
+    </style>
+
+
+    <script>
+    $(document).ready(function() {
+
+      var time = 7; // time in seconds
+
+      var $progressBar,
+          $bar, 
+          $elem, 
+          isPause, 
+          tick,
+          percentTime;
+
+        //Init the carousel
+        $("#owl-demo").owlCarousel({
+          slideSpeed : 500,
+          paginationSpeed : 500,
+          singleItem : true,
+          afterInit : progressBar,
+          afterMove : moved,
+          startDragging : pauseOnDragging
+        });
+
+        //Init progressBar where elem is $("#owl-demo")
+        function progressBar(elem){
+          $elem = elem;
+          //build progress bar elements
+          buildProgressBar();
+          //start counting
+          start();
+        }
+
+        //create div#progressBar and div#bar then prepend to $("#owl-demo")
+        function buildProgressBar(){
+          $progressBar = $("<div>",{
+            id:"progressBar"
+          });
+          $bar = $("<div>",{
+            id:"bar"
+          });
+          $progressBar.append($bar).prependTo($elem);
+        }
+
+        function start() {
+          //reset timer
+          percentTime = 0;
+          isPause = false;
+          //run interval every 0.01 second
+          tick = setInterval(interval, 10);
+        };
+
+        function interval() {
+          if(isPause === false){
+            percentTime += 1 / time;
+            $bar.css({
+               width: percentTime+"%"
+             });
+            //if percentTime is equal or greater than 100
+            if(percentTime >= 100){
+              //slide to next item 
+              $elem.trigger('owl.next')
+            }
+          }
+        }
+
+        //pause while dragging 
+        function pauseOnDragging(){
+          isPause = true;
+        }
+
+        //moved callback
+        function moved(){
+          //clear interval
+          clearTimeout(tick);
+          //start again
+          start();
+        }
+
+        //uncomment this to make pause on mouseover 
+        // $elem.on('mouseover',function(){
+        //   isPause = true;
+        // })
+        // $elem.on('mouseout',function(){
+        //   isPause = false;
+        // })
+    });
+    </script>
+</head>
+
+<body>
+<div class="container">
+	<!-- Header -->
+    <header>Dany's Website</header>
+    <!--Navigasi-->
+    <nav>
+   	  <ul>
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="skill.html">Skill</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+    <!--Slider-->
+    <div id="slider">
+    <div id="owl-demo" class="owl-carousel">
+
+                <div class="item"><img src="owl/demos/assets/fullimage1.jpg" alt="The Last of us"></div>
+                <div class="item"><img src="owl/demos/assets/fullimage2.jpg" alt="GTA V"></div>
+                <div class="item"><img src="owl/demos/assets/fullimage3.jpg" alt="Mirror Edge"></div>
+
+              </div>
+    </div>
+    <!--Section-->
+  <section>
+    	<div class="berita"> 
+    	  <h1>Welcome to my site
+    	  </h1>
+    	  <p>Lorem ipsum dolor sit amet,  consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere,  magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo  magna eros quis urna.<br>
+    	    Nunc viverra imperdiet enim.  Fusce est. Vivamus a tellus.<br>
+    	    Pellentesque habitant morbi  tristique senectus et netus et malesuada fames ac turpis egestas. Proin  pharetra nonummy pede. Mauris et orci.<br>
+    	    Aenean nec lorem. In  porttitor. Donec laoreet nonummy augue.<br>
+    	    Suspendisse dui purus,  scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem  venenatis eleifend. Ut nonummy.<br>
+    	    Fusce aliquet pede non pede.  Suspendisse dapibus lorem pellentesque magna. Integer nulla.<br>
+    	    Donec blandit feugiat ligula.  Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in  lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat.<br>
+    	    Etiam eget dui. Aliquam erat  volutpat. Sed at lorem in nunc porta tristique.<br>
+    	    Proin nec augue. Quisque  aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus  et malesuada fames ac turpis egestas.<br>
+   	      Nunc ac magna. Maecenas odio  dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus  sagittis felis.</p>
+          <p>&nbsp;</p>
+   	</div>
+        <div class="listing">
+          <h2>Berita Terbaru</h2>
+          <ul>
+            <li>Bakso Bulat Enak</li>
+            <li>Makan di Bekasi Square</li>
+            <li>Pulang Kampung Ramai</li>
+            <li>Grand Finalis SUCI5</li>
+          </ul>
+        </div>
+    </section>
+    <!--Footer-->
+  <div class="clearfix"></div>
+    <footer>Designed by Dany - &copy; 2015</footer>
+</div>
+</body>
+</html>

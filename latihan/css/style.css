@@ -1,0 +1,191 @@
+/* CSS Document */
+body {
+	background-color: #CCC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*container*/
+.container {
+	background-color: #FFF;
+	width: 900px;
+	padding: 20px;
+	margin: 30px auto;
+	border-radius: 10px;
+	min-height: 200px;
+}
+/* header */
+header {
+	padding: 20px 0;
+	font-size: 48px;
+	font-weight: bold;
+	text-shadow: 2px 2px grey;
+	color: #F60
+}
+/* nav */
+nav {
+	margin: 10px 0;
+	height: 60px;
+	color: #FFF;
+	background-color: #f60;
+}
+nav ul {
+	padding: 0; margin: 0;
+}
+nav ul li{
+	float: left;
+	height: 60px;
+	list-style: none;
+}
+nav ul li a {
+	float: left;
+	padding: 20px;
+	height: 20px;
+	color: #FFF;
+	text-decoration: none;
+}
+nav ul li a:visited {
+	color:#FF0;
+}
+nav ul li a:hover {
+	background-color: #900;
+}
+/*slider*/
+#slider {
+	min-height: 300px;
+	color: #f60;
+	margin-bottom: 10px;
+}
+/*Section*/
+section {
+	margin-bottom: 10 px;
+}
+/*produk */
+.produk{
+	margin: 10px;
+	width: 205px;
+	height: 250px;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+	float: left;
+	display: inline-block;
+	text-align: center;
+}
+.produk h1 {
+	background-color: #f60;
+	padding: 10px 20px;
+	margin-top: 0;
+	color: #FFF;
+	border-radius: 5px 5px 0 0;
+	font-size: 16px;
+}
+.produk img {
+	width: auto;
+	max-width: 165px;
+	height: auto;
+	max-height: 210px;
+	border-radius: 5px;
+}
+.berita {
+	width: 600px;
+	float: left;
+	color: #333;
+	min-height: 200px;
+}
+.berita h1 {
+	color: #C90;
+	font-size: 24px;
+	border-bottom:dotted;
+}
+.berita form {
+	border: solid;
+	background-color: #CCC;
+	padding: 20px;
+	border-radius: 5px;
+}
+.berita label {
+	display: block;
+	font-weight:bold;
+	text-transform: capitalize;
+}
+.berita input[type='text'], .berita textarea {
+	padding: 6px 2%;
+	width: 94%;
+	background-color: #ffc;
+}
+.berita input[type='submit'] {
+	background-color: #099:
+	color #fff;
+	border: none;
+	padding: 10px 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+	min-width: 50px;
+	min-height: 50px;
+}
+.berita input[type='submit']:hover {
+	background-color: #900;
+}
+.berita	p {
+	text-align:justify;
+}
+.berita img {
+	width: auto;
+	max-width: 588px;
+	padding: 5px;
+	border: solid 1px #F30;
+	background-color: #ffc;
+	height:auto;
+}
+.berita ul {
+	background-color: #CCC;
+	padding: 20px;
+	margin: 0;
+	color: #999;
+}
+.berita li {
+	list-style: none;
+	padding: 6px 12px;
+	border-bottom: dotted thin #000;
+}
+.berita a, .berita a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.berita a:hover {
+	color: #000;
+}
+/*Listing*/
+.listing {
+	background-color: #F5F5F5;
+	width: 280px;
+	margin-left: 20px;
+	float: right;
+	min-height: 300px;
+}
+.listing h2 {
+	background-color: #f60;
+	color: #fff;
+	padding: 10px 20px;
+	margin-top: 0;
+	font-size: 18px;
+}
+.listing ul {
+	padding: 0;
+	margin: 10px 20px;
+}
+.listing ul li {
+	list-style: none;
+	padding: 6px 12px;
+	border-bottom: dotted thin #f60;
+}
+/*clearfix*/
+.clearfix {
+	clear:both;
+	margin-bottom: 10px;
+}
+/*footer*/
+footer {
+	padding: 10px 0;
+	text-align: center;
+	border-top: solid 2px #EEE;
+}
